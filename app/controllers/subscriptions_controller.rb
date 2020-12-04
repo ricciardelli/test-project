@@ -6,9 +6,9 @@ class SubscriptionsController < ApplicationController
     @subscription = @broadcast.subscriptions.build subscription_params
   
     if @subscription.save
-      render json: @subscription
+      render json: @subscription, status: 201
     else
-      render json: @subscription.errors
+      render json: @subscription.errors, status: 400
     end
 	end
 

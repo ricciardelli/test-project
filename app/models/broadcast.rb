@@ -3,6 +3,6 @@ class Broadcast < ApplicationRecord
   accepts_nested_attributes_for :subscriptions
 
   def subscriptions_count
-    self.subscriptions.count
+    self.subscriptions.count or 0
   end
 end
