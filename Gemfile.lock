@@ -84,6 +84,8 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.14.2)
     msgpack (1.3.3)
+    name_of_person (1.1.1)
+      activesupport (>= 5.2.0)
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
@@ -150,6 +152,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   listen (~> 3.2)
+  name_of_person
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
   spring

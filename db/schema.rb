@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_100754) do
+ActiveRecord::Schema.define(version: 2020_12_04_103139) do
 
   create_table "broadcasts", force: :cascade do |t|
     t.string "title"
-    t.date "broadcast_date"
+    t.datetime "broadcast_date"
     t.integer "subscriptions_count", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
