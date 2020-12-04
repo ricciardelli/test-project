@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_100604) do
+ActiveRecord::Schema.define(version: 2020_12_04_100754) do
 
   create_table "broadcasts", force: :cascade do |t|
     t.string "title"
@@ -20,4 +20,18 @@ ActiveRecord::Schema.define(version: 2020_12_04_100604) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer "broadcast_id", null: false
+    t.boolean "watched"
+    t.string "email"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "registration_ip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["broadcast_id"], name: "index_subscriptions_on_broadcast_id"
+    t.index ["email"], name: "index_subscriptions_on_email", unique: true
+  end
+
+  add_foreign_key "subscriptions", "broadcasts"
 end
